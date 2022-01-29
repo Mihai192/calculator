@@ -1,8 +1,8 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-color: rgb(246, 248, 249);
 	
+	background-color: rgb(246, 248, 249);
 	font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 
 }
@@ -10,6 +10,7 @@ body {
 #main {
 	width: 100vw;
 	height: 100vh;
+	max-width: 100%;
 }
 
 
@@ -57,10 +58,6 @@ body {
 	height: 85%;
 
 	font-size: calc(0.2 * 0.8 * 100vh / 3.19);
-
-	background-color: rgb(233, 240, 244);
-	color: rgb(34, 39, 47);
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -70,7 +67,12 @@ body {
 	cursor: pointer;
 }
 
-.yellow-button {
+.white-button {
+	background-color: rgb(233, 240, 244);
+	color: rgb(34, 39, 47);
+}
+
+.orange-button {
 	background-color: orange;
 	color: rgb(255, 246, 233);
 }
@@ -87,7 +89,25 @@ body {
 
 .zero-button {
 	width: 48%;
-	background-color: rgb(233, 240, 244);
+}
+
+.white-button:hover {
+	background-color: rgb(34, 39, 47);
+	color: rgb(233, 240, 244);
+}
+
+.orange-button:hover {
+	background-color: rgb(252, 109, 1);
+	color: rgb(255, 246, 233);
+}
+
+.red-button:hover {
+	color: white;
+	background-color: #ff1a1a;
+}
+
+.green-button:hover {
+	background-color: rgb(1, 173, 1);
 }
 
 
