@@ -65,8 +65,6 @@ function main()
 		button.addEventListener('click', function() {
 			button_pressed = button.innerHTML;
 
-			console.log(operand1, operator, operand2);
-
 			if (button_pressed >= '0' && button_pressed <= '9')
 			{
 				
