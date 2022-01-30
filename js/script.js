@@ -111,11 +111,11 @@ function main()
 			}
 			else if (button_pressed == "AC")
 			{
-				operand1 ="0";
-				operand2 = "";
-				sign1    = "+";
-				operator = "";
-				sign2    = "+";
+				operand1 				 = "0";
+				operand2                 = "" ;
+				sign1                    = "+";
+				operator                 = "" ;
+				sign2                    = "+";
 				result_section.innerHTML = "0";
 			}
 			else if (button_pressed == "+/-")
