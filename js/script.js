@@ -72,12 +72,12 @@ function main()
 				{
 					if (operand1 == "0")
 					{
-						result_section.innerHTML = button_pressed;
+						result_section.firstElementChild.innerHTML = button_pressed;
 						operand1 = button_pressed;
 					}
 					else
 					{
-						result_section.innerHTML += button_pressed;
+						result_section.firstElementChild.innerHTML += button_pressed;
 						operand1 += button_pressed;
 					}
 				}
@@ -85,26 +85,26 @@ function main()
 				{
 					if (operand2)
 					{
-						result_section.innerHTML += button_pressed;
+						result_section.firstElementChild.innerHTML += button_pressed;
 						operand2 += button_pressed;
 					}
 					else
 					{
-						result_section.innerHTML = button_pressed;
+						result_section.firstElementChild.innerHTML = button_pressed;
 						operand2 += button_pressed;
 					}
 				}
 			}
 			else if (button_pressed == '.')
 			{
-				if (result_section.innerHTML.indexOf(".") == -1)
+				if (result_section.firstElementChild.innerHTML.indexOf(".") == -1)
 				{
 					if (operand2)
 							operand2 += button_pressed;
 						else
 							operand1 += button_pressed;
 
-						result_section.innerHTML += button_pressed;
+						result_section.firstElementChild.innerHTML += button_pressed;
 				}
 			}
 			else if (button_pressed == "AC")
@@ -114,7 +114,7 @@ function main()
 				sign1                    = "+";
 				operator                 = "" ;
 				sign2                    = "+";
-				result_section.innerHTML = "0";
+				result_section.firstElementChild.innerHTML = "0";
 			}
 			else if (button_pressed == "+/-")
 			{
@@ -122,13 +122,13 @@ function main()
 				{
 					sign2 = reverseSign(sign2);
 					operand2 = addSign(operand2, sign2);
-					result_section.innerHTML = operand2;
+					result_section.firstElementChild.innerHTML = operand2;
 				}
 				else
 				{
 					sign1 = reverseSign(sign1);
 					operand1 = addSign(operand1, sign1);
-					result_section.innerHTML = operand1;
+					result_section.firstElementChild.innerHTML = operand1;
 				}
 			}
 			else if (isOperator(button_pressed))
@@ -151,7 +151,7 @@ function main()
 					operand1 = result;
 
 
-					result_section.innerHTML = result;
+					result_section.firstElementChild.innerHTML = result;
 				}
 			}
 		});
