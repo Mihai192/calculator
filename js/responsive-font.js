@@ -19,7 +19,7 @@ function main()
 {  
     const result_section = document.getElementById('result');
     const text = result_section.firstElementChild;
-    let   value = 50;
+    let   value = 100;
     let initialValue = Number(text.style.fontSize);
     let   digitWidth;
     let   digitAbleToFit;
@@ -30,13 +30,15 @@ function main()
         
         if (digitAbleToFit < 0)
         {
-            
+            value = 0.8 * value;
             text.style.fontSize = String(value) + "%";
-            value = 3 * value / 4;
         }
         
         else if (text.innerHTML.length == 1)   
+        {
             text.style.fontSize = String(100) + "%";
+            value = 100;
+        }
         
         
     }, 500);
